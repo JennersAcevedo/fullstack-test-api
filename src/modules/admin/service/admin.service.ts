@@ -8,7 +8,6 @@ export class AdminService {
         private readonly prisma: PrismaService
     ) { }
     async addUser(body: any, token: any) {
-        let userPrismaResponse = await this.prisma.user.create({ data: body })
-        return userPrismaResponse
+        return  await this.prisma.user.create({ data: body })
     }
    }

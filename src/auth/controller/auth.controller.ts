@@ -7,6 +7,8 @@ export class AuthController {
     constructor(private readonly authService: AuthService,
 
     ) { }
+
+    //login needs to be public
     @Public()
     @Get('/login/:email/:password')
     async getLoogin(

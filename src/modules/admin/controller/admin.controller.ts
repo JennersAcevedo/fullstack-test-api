@@ -9,7 +9,7 @@ export class AdminController {
         private readonly adminService: AdminService,
         private readonly jwtService: JwtService
     ) { }
-
+//this endpoint only will be accesibe for the admin user
     @Post('/add/user')
     async addUser(
         @Res() response,

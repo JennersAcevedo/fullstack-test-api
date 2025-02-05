@@ -26,7 +26,7 @@ export class NoteService {
         const noteExists = await this.prisma.note.findUnique({
             where: { id:noteId },
         });
-    
+    //If the note isn't in the database will send an errror
         if (!noteExists) {
             throw new Error("Note not found");
         }
@@ -43,7 +43,7 @@ export class NoteService {
         const noteExists = await this.prisma.note.findUnique({
             where: { id:noteId },
         });
-    
+    //If the note isn't in the database will send an errror
         if (!noteExists) {
             throw new Error("Note not found");
         }
